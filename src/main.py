@@ -1,30 +1,28 @@
-from clients.hn_client import HackerNewsClient
-from clients.email_client import EmailClient
-from services.summarizer_service import SummarizerService
-from graph.digest_graph import build_digest_graph  
+# run_demo.py
+from agent.state import AgentState
+from agent.graph import build_graph
 
 def main():
-    """
-    Entrypoint for running the agentic pipeline.
+    graph = build_graph()
 
-    Instantiates required clients and services, builds the LangGraph workslow, 
-    executes digest generation, emails it, prints the digest to terminal. 
-    """
-    hn_client = HackerNewsClient()
-    email_client = EmailClient("email_config.json")
-    summarizer = SummarizerService()
-
-    graph = build_digest_graph(
-        hn_client=hn_client,
-        email_client=email_client,
-        summarizer=summarizer,
-        top_fetch_limit=60,
-        relevant_limit=5,
+    question = (
+        "Patient has cough and runny nose, no asthma history. "
+        "What is the likely diagnosis and treatment?"
     )
 
-    final_state = graph.invoke({})
-    print("\n=== Digest Sent ===\n")
-    print(final_state["report_md"])
+    initial_state: AgentState = {
+        "question": question,
+        "llm_raw_answer": None,
+        "llm_json": {},
+        "prolog_facts": [],
+        "violations": [],
+        "corrected_answer": {},
+        "reasoning_trace": [],
+        "final_text_response": None,
+    }
+
+    final_state = graph.invoke(initial_state)
+    print(final_state["final_text_response"])
 
 if __name__ == "__main__":
     main()

@@ -3,7 +3,7 @@ import json
 from typing import Any, Dict
 
 from langchain_google_genai import ChatGoogleGenerativeAI
-from state import AgentState
+from agent.state import AgentState
 
 # This is the LLM you tested
 llm = ChatGoogleGenerativeAI(

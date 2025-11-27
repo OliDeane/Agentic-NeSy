@@ -1,9 +1,9 @@
 # graph.py
 from langgraph.graph import StateGraph, END
 
-from state import AgentState
-from llm_nodes import llm_answer_node
-from ns_nodes import (
+from agent.state import AgentState
+from agent.llm_nodes import llm_answer_node
+from agent.ns_nodes import (
     prolog_fact_builder_node,
     consistency_checker_node,
     router_node,

@@ -4,7 +4,7 @@ from pyswip import Prolog
 
 PATIENT_ID = "p1"  # fixed for single-case runs
 prolog = Prolog()
-prolog.consult("kb.pl")
+prolog.consult("symbolic/kb.pl")
 
 
 def prolog_atom(s: str) -> str:

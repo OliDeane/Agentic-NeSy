@@ -4,8 +4,8 @@ from typing import List, Dict, Any
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-from state import AgentState
-from prolog_interface import (
+from agent.state import AgentState
+from symbolic.prolog_interface import (
     reset_patient_facts,
     build_patient_facts_from_json,
     assert_fact,
