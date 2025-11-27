@@ -1,0 +1,8 @@
+{
+  "smtp_user": "oliver.deane@gmail.com",
+  "smtp_pass": "iehp ytts joiq zarf",
+  "email_from": "oliver.deane@gmail.com",
+  "email_to": "oliver.deane@bristol.ac.uk",
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 587
+}
