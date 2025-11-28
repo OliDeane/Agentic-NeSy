@@ -32,13 +32,13 @@ This project solves that problem by combining an LLM with a symbolic knowledge b
 
 ## IMPORTANT FILES
 
-kb.pl - Prolog knowledge base (facts and constraints)
-state.py - AgentState definition used by LangGraph
-llm_nodes.py - LLM-related nodes (Gemini answer, correction)
-ns_nodes.py - Neurosymbolic nodes (Prolog interface, consistency checking, response)
-prolog_interface.py - Python-to-Prolog bridge functions using pyswip
-graph.py - LangGraph workflow definition
-run_demo.py - Command-line demo for running the agent
+- kb.pl - Prolog knowledge base (facts and constraints)
+- state.py - AgentState definition used by LangGraph
+- llm_nodes.py - LLM-related nodes (Gemini answer, correction)
+- ns_nodes.py - Neurosymbolic nodes (Prolog interface, consistency checking, response)
+- prolog_interface.py - Python-to-Prolog bridge functions using pyswip
+- graph.py - LangGraph workflow definition
+- run_demo.py - Command-line demo for running the agent
 
 ## KEY COMPONENTS
 
