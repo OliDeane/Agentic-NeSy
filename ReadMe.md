@@ -97,9 +97,11 @@ pip install -r requirements.txt
 Add your Google API key to a .env file:
 GOOGLE_API_KEY=your_key_here
 
-### RUNNING THE DEMO
+### RUN THE DEMO
 Run the main agent pipeline. Navigate to the src directory and run:
+```python
 python main.py
+```
 
 ### Example output:
 
